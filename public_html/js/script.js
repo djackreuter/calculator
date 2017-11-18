@@ -43,8 +43,48 @@ window.onload = function() {
             result = oldNum + currentNum;
             break;
 
-            
+            case 'minus':
+            result = oldNum - currentNum;
+            break;
+
+            case 'multiply':
+            result = oldNum * currentNum;
+            break;
+
+            case 'modulus':
+            result = oldNum % currentNum;
+            break;
+
+            // if equals is pressed without an operator, keep number and continue
+            default:
+            result = currentNum;
         }
+
+        // display the result
+        display.innerHTML = result;
+        equals.setAttribute('data-result', result);
+
+        // reset old number and keep result
+        oldNum = 0;
+        currentNum = result;
+    };
+
+    // clear everything when clear is pressed
+    var clearAll = function() {
+        oldNum = '';
+        currentNum = '';
+        display.innerHTML = '0';
+        equals.setAttribute('data-result', result);
+    };
+
+    // click events for numbers
+    for(var i = 0, l = allNums.length; i < l; i++) {
+        allNums[i].onclick = setNum;
+    }
+
+    // click events for operators
+    for(var i = 0, l = ops.length; i < l; i++) {
+        ops[i].onclick = moveNum;
     }
 
 }
