@@ -87,4 +87,10 @@ window.onload = function() {
         ops[i].onclick = moveNum;
     }
 
+    // click event for equal sign
+    equals.onclick = displayNum;
+
+    // click event for clear button
+    document.getElementById('clear').onclick = clearAll;
+
 }
