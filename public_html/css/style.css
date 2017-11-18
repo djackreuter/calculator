@@ -25,3 +25,7 @@ body {
     text-align: right;
     overflow: hidden;
 }
+
+.container {
+margin-right: 1rem;
+}
