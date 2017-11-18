@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/style.css">
-        <!-- jQuery v3.2 -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 
-        <title>Calculator</title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="card">
-                <div class="row">
-                    <!-- display pannel -->
-                    <div class="col-4">
-                            <button type="button" class="btn btn-outline-secondary">C</button>                        
-                        <input type="text">
-                    </div><!-- /.col-4 -->
-                </div><!-- /.row -->
-                <div class="row">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-outline-secondary" data-num="7">7</button>
-                        <button type="button" class="btn btn-outline-secondary" data-num="8">8</button>                   
-                        <button type="button" class="btn btn-outline-secondary" data-num="9">9</button>
-                        <button type="button" class="btn btn-outline-secondary" data-ops="plus">+</button>
-                    </div><!-- /.col-6 -->
-                </div><!-- /.row -->
-                <div class="row">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-outline-secondary" data-num="4">4</button>
-                        <button type="button" class="btn btn-outline-secondary" data-num="5">5</button>                   
-                        <button type="button" class="btn btn-outline-secondary" data-num="6">6</button>
-                        <button type="button" class="btn btn-outline-secondary" data-ops="minus">-</button>
-                    </div><!-- /.col-6 -->
-                </div><!-- /.row -->
-                <div class="row">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-outline-secondary" data-num="1">1</button>
-                        <button type="button" class="btn btn-outline-secondary" data-num="2">2</button>                   
-                        <button type="button" class="btn btn-outline-secondary" data-num="3">3</button>
-                        <button type="button" class="btn btn-outline-secondary" data-ops="multiply">*</button>
-                    </div><!-- /.col-6 -->
-                </div><!-- /.row -->
-                <div class="row">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-outline-secondary" data-num="0">0</button>
-                        <button type="button" class="btn btn-outline-secondary" data-ops="decimal">.</button>                   
-                        <button type="button" class="btn btn-outline-secondary" data-ops="equals">=</button>
-                        <button type="button" class="btn btn-outline-secondary" data-ops="divide">%</button>
-                    </div><!-- /.col-6 -->
-                </div><!-- /.row -->
-            </div><!-- /.card -->
-        </div><!-- /.container -->
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery v3.2 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="row align-items-center">
+
+                <!-- display pannel -->
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-info" id="clear">C</button>
+                    <input type="text">
+                </div><!-- /.col-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-info" data-num="7">7</button>
+                    <button type="button" class="btn btn-outline-info" data-num="8">8</button>
+                    <button type="button" class="btn btn-outline-info" data-num="9">9</button>
+                    <button type="button" class="btn btn-outline-info" data-ops="plus">+</button>
+                </div>
+                <!-- /.col-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-info" data-num="4">4</button>
+                    <button type="button" class="btn btn-outline-info" data-num="5">5</button>
+                    <button type="button" class="btn btn-outline-info" data-num="6">6</button>
+                    <button type="button" class="btn btn-outline-info" data-ops="minus">-</button>
+                </div>
+                <!-- /.col-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-info" data-num="1">1</button>
+                    <button type="button" class="btn btn-outline-info" data-num="2">2</button>
+                    <button type="button" class="btn btn-outline-info" data-num="3">3</button>
+                    <button type="button" class="btn btn-outline-info" data-ops="multiply">*</button>
+                </div>
+                <!-- /.col-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-info" data-num="0">0</button>
+                    <button type="button" class="btn btn-outline-info" data-ops="decimal">.</button>
+                    <button type="button" class="btn btn-outline-info" data-ops="equals">=</button>
+                    <button type="button" class="btn btn-outline-info" data-ops="divide">%</button>
+                </div>
+                <!-- /.col-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.container -->
+</body>
 </html>

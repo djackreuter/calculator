@@ -1,0 +1,10 @@
+.btn {
+    padding: 1rem;
+    margin: 0 1rem 1rem 0;
+    border-radius: 50%;
+}
+
+#clear {
+    padding: 1rem;
+    margin: 1rem 1rem 1rem 0;
+}
