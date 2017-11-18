@@ -16,17 +16,24 @@
         <title>Calculator</title>
     </head>
     <body>
-        <form name="calculator">
-            <table class="table">
-                <!-- display pannel -->
-                <tr>
-                    <th><textarea></textarea></th>
-                </tr>
-                <tr>
-                    <th scope="col"><button type="button" class="btn btn-outline-secondary"></button>
-                    </th>
-                </tr>
-            </table>
-        </form>
+        <div class="container">
+            <div class="card">
+                <div class="row">
+                    <!-- display pannel -->
+                    <div class="col-4">
+                            <button type="button" class="btn btn-outline-secondary">C</button>                        
+                        <input type="text">
+                    </div><!-- /.col-4 -->
+                </div><!-- /.row -->
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-outline-secondary" data-num="7">7</button>
+                        <button type="button" class="btn btn-outline-secondary" data-num="8">8</button>                   
+                        <button type="button" class="btn btn-outline-secondary" data-num="9">9</button>
+                        <button type="button" class="btn btn-outline-secondary" data-ops="plus">+</button>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.card -->
+        </div><!-- /.container -->
     </body>
 </html>
